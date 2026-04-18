@@ -24,16 +24,21 @@ git clone https://github.com/D1533/syscall-info.git
 cd syscall-info
 ```
 
+---
+
 ## Usage
 ```bash
-python3 syscallinfo.py [syscall] [--all] [--arch ARCH] [--asm] [--json]
+$ python3 syscallinfo.py [syscall] [--all] [--arch ARCH] [--asm] [--json]
 ```
-
+```text
 `syscall`        Syscall name or number  
 `--all`          Print full syscall table  
 `--arch ARCH`    Select architecture (x86_64 default, or x86)  
 `--asm`          Generate assembly syscall stub  
 `--json`         Output syscall information in JSON format 
+```
+
+---
 
 ## Examples
 
@@ -58,7 +63,7 @@ read
 
 ### Dump all syscall table
 ```bash
-$ python3 syscallinfo.py -all
+$ python3 syscallinfo.py --all
 0 read(unsigned int fd, char *buf, size_t count)
 1 write(unsigned int fd, const char *buf, size_t count)
 2 open(const char *filename, int flags, int mode)
