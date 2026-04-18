@@ -66,5 +66,35 @@ $ python3 syscallinfo.py -all
 ...
 ```
 
+### Get ASM model code
+```bash
+$ python3 syscallinfo.py read --asm
+; read syscall
+mov rax, 0
+mov rdi, fd      ; unsigned int fd
+mov rsi, buf     ; char *buf
+mov rdx, count   ; size_t count
+syscall
+```
 
-
+### Get JSON format
+```bash
+$ python3 syscallinfo.py read --json
+{
+  "number": 0,
+  "name": "read",
+  "args": [
+    "unsigned int fd",
+    "char *buf",
+    "size_t count"
+  ],
+  "registers": [
+    "rdi",
+    "rsi",
+    "rdx"
+  ],
+  "syscall_reg": "rax",
+  "syscall_instr": "syscall",
+  "arch": "x86_64"
+}
+```
