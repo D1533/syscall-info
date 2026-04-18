@@ -1,8 +1,7 @@
 ## syscall-info
 
-A fast CLI tool to inspect Linux system calls and generate assembly syscall stubs for x86 and x86_64 architectures.
-
-Designed for reverse engineering, CTFs, exploit development, and learning Linux internals.
+A command-line tool for inspecting Linux system calls and generating assembly syscall
+stubs for x86 and x86_64 — designed to eliminate the need for browser lookups or man-page digging during reverse engineering, CTFs, and exploit development.
 
 ---
 
