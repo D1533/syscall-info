@@ -31,7 +31,7 @@ cd syscall-info
 $ python3 syscallinfo.py [syscall] [--all] [--arch ARCH] [--asm] [--json]
 
 ```
-`syscall`        \t - Syscall name or number  
+``syscall`         - Syscall name or number`  
 `--all`          \t - Print full syscall table  
 `--arch ARCH`    \t - Select architecture (x86_64 default, or x86)  
 `--asm`          \t - Generate assembly syscall stub  
