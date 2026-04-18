@@ -54,7 +54,7 @@ read
 ```
 ### Search by syscall number
 ```bash
-$ python3 syscallinfo.py 59
+$ python3 syscallinfo.py 0
 ```
 ```text
 read
