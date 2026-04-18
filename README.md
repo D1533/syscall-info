@@ -40,7 +40,7 @@ $ python3 syscallinfo.py [syscall] [--all] [--arch ARCH] [--asm] [--json]
 
 ## Examples
 
-### Search by syscall name
+#### Search by syscall name
 ```bash
 $ python3 syscallinfo.py read
 ```
