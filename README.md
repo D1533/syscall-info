@@ -20,7 +20,7 @@ Designed for reverse engineering, CTFs, exploit development, and learning Linux 
 ## Installation
 
 ```bash
-git clone https://github.com/yourname/syscall-info.git
+git clone https://github.com/D1533/syscall-info.git
 cd syscall-info
 ```
 
@@ -33,4 +33,38 @@ python3 syscallinfo.py [syscall] [--all] [--arch ARCH] [--asm] [--json]
 `--all`          Print full syscall table  
 `--arch ARCH`    Select architecture (x86_64 default, or x86)  
 `--asm`          Generate assembly syscall stub  
-`--json`         Output syscall information in JSON format  
+`--json`         Output syscall information in JSON format 
+
+## Examples
+
+### Search by syscall name
+```bash
+$ python3 syscallinfo.py read
+read
+  rax: 0
+  rdi: unsigned int fd
+  rsi: char *buf
+  rdx: size_t count
+```
+### Search by syscall number
+```bash
+$ python3 syscallinfo.py 59
+read
+  rax: 0
+  rdi: unsigned int fd
+  rsi: char *buf
+  rdx: size_t count
+```
+
+### Dump all syscall table
+```bash
+$ python3 syscallinfo.py -all
+0 read(unsigned int fd, char *buf, size_t count)
+1 write(unsigned int fd, const char *buf, size_t count)
+2 open(const char *filename, int flags, int mode)
+3 close(unsigned int fd)
+...
+```
+
+
+
