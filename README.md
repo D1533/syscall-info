@@ -29,14 +29,13 @@ cd syscall-info
 ## Usage
 ```bash
 $ python3 syscallinfo.py [syscall] [--all] [--arch ARCH] [--asm] [--json]
+
 ```
-```text
 `syscall`        Syscall name or number  
 `--all`          Print full syscall table  
 `--arch ARCH`    Select architecture (x86_64 default, or x86)  
 `--asm`          Generate assembly syscall stub  
 `--json`         Output syscall information in JSON format 
-```
 
 ---
 
