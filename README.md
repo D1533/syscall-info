@@ -55,6 +55,8 @@ read
 ### Search by syscall number
 ```bash
 $ python3 syscallinfo.py 59
+```
+```text
 read
   rax: 0
   rdi: unsigned int fd
@@ -65,6 +67,8 @@ read
 ### Dump all syscall table
 ```bash
 $ python3 syscallinfo.py --all
+```
+```text
 0 read(unsigned int fd, char *buf, size_t count)
 1 write(unsigned int fd, const char *buf, size_t count)
 2 open(const char *filename, int flags, int mode)
@@ -75,6 +79,8 @@ $ python3 syscallinfo.py --all
 ### Get ASM model code
 ```bash
 $ python3 syscallinfo.py read --asm
+```
+```text
 ; read syscall
 mov rax, 0
 mov rdi, fd      ; unsigned int fd
@@ -86,6 +92,8 @@ syscall
 ### Get JSON format
 ```bash
 $ python3 syscallinfo.py read --json
+```
+```text
 {
   "number": 0,
   "name": "read",
